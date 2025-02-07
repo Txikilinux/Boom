@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 		killing = false
 		sprite.play("walk")
 		# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	var dir = (player.transform.origin-transform.origin).normalized()*ray_len
 	nav.set_target_position(player.transform.origin)

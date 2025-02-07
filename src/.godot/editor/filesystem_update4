@@ -1,3 +1,13 @@
 res://default_env.tres
 res://UI/copyright.tscn
+res://Weapons/BloodHit.gd
 res://Characters/UITheme.tres
+res://UI/copyright.gd
+res://Weapons/Ak47/Ak47.gd
+res://Characters/Scientist.gd
+res://Tools/Teleporter.gd
+res://BaseClasses/LevelBase.gd
+res://Tools/Wall.tscn
+res://Tools/Pillar.tscn
+res://Models/Torch/wall_torch.tscn
+res://Levels/Level0.tscn

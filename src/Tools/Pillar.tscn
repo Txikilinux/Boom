@@ -1,48 +1,36 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=4 uid="uid://t3fln1rmsa0a"]
 
-[ext_resource path="res://Textures/Metal022_1K_Color.jpg" type="Texture2D" id=1]
-[ext_resource path="res://Textures/Metal022_1K_NormalGL.jpg" type="Texture2D" id=2]
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(4, 50, 4)
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 0.185678, 0.196795, 0.27235 )
+[sub_resource type="BoxMesh" id="2"]
 
-[sub_resource type="BoxMesh" id=2]
-
-[sub_resource type="StandardMaterial3D" id=3]
-albedo_texture = ExtResource( 1 )
-normal_enabled = true
-normal_scale = 1.0
-normal_texture = ExtResource( 2 )
-uv1_scale = Vector3( 1, 7, 1 )
-
-[sub_resource type="ArrayMesh" id=4]
-lightmap_size_hint = Vector2( 418, 206 )
-surfaces/0 = {
-"aabb": AABB( -1.02887, -1.02887, -1.02887, 2.05773, 2.05774, 2.05774 ),
-"array_data": PackedByteArray( 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 0, 0, 127, 64, 0, 0, 0, 0, 253, 59, 253, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 0, 0, 127, 64, 0, 0, 0, 56, 131, 33, 253, 56, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 0, 0, 127, 64, 85, 53, 0, 0, 253, 59, 109, 58, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 0, 0, 127, 64, 85, 53, 0, 56, 131, 33, 109, 58, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 127, 127, 129, 64, 85, 57, 0, 0, 233, 59, 223, 54, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 127, 127, 129, 64, 85, 57, 0, 56, 230, 20, 223, 54, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 127, 127, 129, 64, 0, 60, 0, 0, 233, 59, 223, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 127, 127, 129, 64, 0, 60, 0, 56, 230, 20, 223, 56, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 127, 0, 127, 127, 85, 53, 0, 0, 233, 59, 114, 50, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 127, 0, 127, 127, 85, 53, 0, 56, 230, 20, 114, 50, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 127, 0, 127, 127, 85, 57, 0, 0, 233, 59, 248, 24, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 127, 0, 127, 127, 85, 57, 0, 56, 230, 20, 248, 24, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 129, 0, 0, 63, 0, 0, 0, 56, 233, 59, 233, 50, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 129, 0, 0, 63, 0, 0, 0, 60, 230, 20, 233, 50, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 129, 0, 0, 63, 85, 53, 0, 56, 233, 59, 164, 54, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 129, 0, 0, 63, 85, 53, 0, 60, 230, 20, 164, 54, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 0, 127, 129, 64, 85, 53, 0, 56, 22, 56, 139, 58, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 0, 127, 129, 64, 85, 53, 0, 60, 154, 54, 139, 58, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 0, 127, 129, 64, 85, 57, 0, 56, 22, 56, 251, 59, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 0, 127, 129, 64, 85, 57, 0, 60, 154, 54, 251, 59, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 0, 129, 127, 64, 85, 57, 0, 56, 90, 46, 139, 58, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 0, 129, 127, 64, 85, 57, 0, 60, 230, 20, 139, 58, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 0, 129, 127, 64, 0, 60, 0, 56, 90, 46, 251, 59, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 0, 129, 127, 64, 0, 60, 0, 60, 230, 20, 251, 59 ),
-"array_index_data": PackedByteArray( 0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0 ),
-"blend_shape_data": [  ],
-"format": 2194743,
+[sub_resource type="ArrayMesh" id="4"]
+lightmap_size_hint = Vector2i(418, 206)
+_surfaces = [{
+"aabb": AABB(-1.02887, -1.02887, -1.02887, 2.05773, 2.05774, 2.05774),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAoH8/AKAfPwAAAAAAAAA/AGAwPACgHz8AoKo+AAAAAACgfz8AoE0/AKCqPgAAAD8AYDA8AKBNPwCgKj8AAAAAACB9PwDg2z4AoCo/AAAAPwDAnDoA4Ns+AACAPwAAAAAAIH0/AOAbPwAAgD8AAAA/AMCcOgDgGz8AoKo+AAAAAAAgfT8AQE4+AKCqPgAAAD8AwJw6AEBOPgCgKj8AAAAAACB9PwAAHzsAoCo/AAAAPwDAnDoAAB87AAAAAAAAAD8AIH0/ACBdPgAAAAAAAIA/AMCcOgAgXT4AoKo+AAAAPwAgfT8AgNQ+AKCqPgAAgD8AwJw6AIDUPgCgqj4AAAA/AMACPwBgUT8AoKo+AACAPwBA0z4AYFE/AKAqPwAAAD8AwAI/AGB/PwCgKj8AAIA/AEDTPgBgfz8AoCo/AAAAPwBAyz0AYFE/AKAqPwAAgD8AwJw6AGBRPwAAgD8AAAA/AEDLPQBgfz8AAIA/AACAPwDAnDoAYH8/"),
+"format": 34359742519,
 "index_count": 36,
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 24
-}
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("7rGDv+6xgz/usYM/7rGDv+6xg7/usYM/7rGDP+6xgz/usYM/7rGDP+6xg7/usYM/7rGDP+6xgz/usYO/7rGDP+6xg7/usYO/7rGDv+6xgz/usYO/7rGDv+6xg7/usYO/7rGDP+6xgz/usYM/7rGDP+6xg7/usYM/7rGDP+6xgz/usYO/7rGDP+6xg7/usYO/7rGDv+6xgz/usYO/7rGDv+6xg7/usYO/7rGDv+6xgz/usYM/7rGDv+6xg7/usYM/7rGDP+6xgz/usYM/7rGDP+6xgz/usYO/7rGDv+6xgz/usYM/7rGDv+6xgz/usYO/7rGDv+6xg7/usYM/7rGDv+6xg7/usYO/7rGDP+6xg7/usYM/7rGDP+6xg7/usYO/AAAAAP//gMAAAAAA//+AwAAAAAD//4DAAAAAAP//gMD/f/9/AACAwP9//38AAIDA/3//fwAAgMD/f/9/AACAwP9/AAD//////38AAP//////fwAA//////9/AAD/////AYAAAP9/fr8BgAAA/39+vwGAAAD/f36/AYAAAP9/fr8AAP9/AACAwAAA/38AAIDAAAD/fwAAgMAAAP9/AACAwAAAAYD//4DAAAABgP//gMAAAAGA//+AwAAAAYD//4DA")
+}]
 
 [node name="Pillar" type="Node3D"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.3763, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.3763, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D( 4, 0, 0, 0, 50, 0, 0, 0, 4, 0, -9, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D( 0.200761, 0, 0, 0, 0.19961, 0, 0, 0, 0.2249, 0, 0, 0 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+transform = Transform3D(0.200761, 0, 0, 0, 0.19961, 0, 0, 0, 0.2249, 0, 0, 0)
+mesh = SubResource("2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/MeshInstance3D"]
-use_in_baked_light = true
-mesh = SubResource( 4 )
+mesh = SubResource("4")

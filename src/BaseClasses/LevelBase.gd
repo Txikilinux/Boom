@@ -20,8 +20,8 @@ func spawn_enemies()-> void:
 			enemy.transform.origin = node.transform.origin
 			add_child(enemy)
 
-func spawn_enemy(name:String)->CharacterBody3D:
-	match name:
+func spawn_enemy(myname:String)->CharacterBody3D:
+	match myname:
 		"Skeleton3D":
 			return skeleton.instantiate()
 		"Scientist":
@@ -29,13 +29,13 @@ func spawn_enemy(name:String)->CharacterBody3D:
 	return null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		#on cancel (ESC) quit game
 		#later this will be changed to take you to title screen
 		get_tree().quit()
 		
 func spawn_player()->void:
-	player_instance = player.instance()
+	player_instance = player.instantiate()
 	player_instance.transform.origin = $PlayerPosition.transform.origin
 	add_child(player_instance)

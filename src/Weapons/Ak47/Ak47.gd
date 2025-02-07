@@ -2,7 +2,6 @@ extends Node3D
 
 @onready var sprite = $CanvasLayer/Control/WeaponAnim
 @onready var shot = $ShotNoise
-signal fire;
 var flash = preload("res://Weapons/Flash.tscn")
 # Declare member variables here. Examples:
 # var a: int = 2
@@ -16,7 +15,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Fire") && can_fire:
 		sprite.play("Fire")
 		add_child(flash.instantiate())
