@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/98399__the-baron__argh.wav-3c2bd93a584b1cdd9752f8232b517a0e.sample"
+type="AudioStreamWAV"
+uid="uid://csrufxpasdli2"
+path="res://.godot/imported/98399__the-baron__argh.wav-3c2bd93a584b1cdd9752f8232b517a0e.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/98399__the-baron__argh.wav"
-dest_files=[ "res://.import/98399__the-baron__argh.wav-3c2bd93a584b1cdd9752f8232b517a0e.sample" ]
+dest_files=["res://.godot/imported/98399__the-baron__argh.wav-3c2bd93a584b1cdd9752f8232b517a0e.sample"]
 
 [params]
 

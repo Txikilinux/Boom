@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 class_name LevelBase
 var player = preload("res://Characters/Player.tscn")
@@ -20,12 +20,12 @@ func spawn_enemies()-> void:
 			enemy.transform.origin = node.transform.origin
 			add_child(enemy)
 
-func spawn_enemy(name:String)->KinematicBody:
+func spawn_enemy(name:String)->CharacterBody3D:
 	match name:
-		"Skeleton":
-			return skeleton.instance()
+		"Skeleton3D":
+			return skeleton.instantiate()
 		"Scientist":
-			return scientist.instance()
+			return scientist.instantiate()
 	return null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

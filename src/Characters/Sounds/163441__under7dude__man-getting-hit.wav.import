@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/163441__under7dude__man-getting-hit.wav-2e1e1db85b9c2a858707444aa8597264.sample"
+type="AudioStreamWAV"
+uid="uid://cgmta885p110o"
+path="res://.godot/imported/163441__under7dude__man-getting-hit.wav-2e1e1db85b9c2a858707444aa8597264.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/163441__under7dude__man-getting-hit.wav"
-dest_files=[ "res://.import/163441__under7dude__man-getting-hit.wav-2e1e1db85b9c2a858707444aa8597264.sample" ]
+dest_files=["res://.godot/imported/163441__under7dude__man-getting-hit.wav-2e1e1db85b9c2a858707444aa8597264.sample"]
 
 [params]
 

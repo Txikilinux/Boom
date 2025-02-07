@@ -4,7 +4,7 @@ var teleporter = preload("res://Tools/Teleporter.tscn")
 var how_many=3
 var victory=false
 var teleporter_spawned = false
-onready var teleporter_position:Position3D = $TeleporterPosition
+@onready var teleporter_position:Marker3D = $TeleporterPosition
 
 
 
@@ -16,7 +16,7 @@ func _on_Timer_timeout() -> void:
 
 
 func _process(delta: float) -> void:
-	._process(delta)
+	super._process(delta)
 	var dead=0
 	for enemy in get_tree().get_nodes_in_group("Enemy"):
 		if enemy.health<=0:
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		spawn_teleporter()
 		
 func spawn_teleporter()->void:
-	var t = teleporter.instance()
+	var t = teleporter.instantiate()
 	t.transform.origin=teleporter_position.transform.origin
 	t.dest_scene="res://Levels/Level1.tscn"
 	add_child(t)

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/567892__merrick079__scream.wav-ea365cbb9e4aec4dc56f846e2ace60a9.sample"
+type="AudioStreamWAV"
+uid="uid://c44aeuxr4sedt"
+path="res://.godot/imported/567892__merrick079__scream.wav-ea365cbb9e4aec4dc56f846e2ace60a9.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/567892__merrick079__scream.wav"
-dest_files=[ "res://.import/567892__merrick079__scream.wav-ea365cbb9e4aec4dc56f846e2ace60a9.sample" ]
+dest_files=["res://.godot/imported/567892__merrick079__scream.wav-ea365cbb9e4aec4dc56f846e2ace60a9.sample"]
 
 [params]
 

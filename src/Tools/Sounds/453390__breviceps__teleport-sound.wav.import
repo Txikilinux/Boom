@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/453390__breviceps__teleport-sound.wav-9ef95de35fc16ebe3dcf495008130109.sample"
+type="AudioStreamWAV"
+uid="uid://qyvvky7k3tsc"
+path="res://.godot/imported/453390__breviceps__teleport-sound.wav-9ef95de35fc16ebe3dcf495008130109.sample"
 
 [deps]
 
 source_file="res://Tools/Sounds/453390__breviceps__teleport-sound.wav"
-dest_files=[ "res://.import/453390__breviceps__teleport-sound.wav-9ef95de35fc16ebe3dcf495008130109.sample" ]
+dest_files=["res://.godot/imported/453390__breviceps__teleport-sound.wav-9ef95de35fc16ebe3dcf495008130109.sample"]
 
 [params]
 

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/454830__misterkidx__zombie-die-1.wav-d9d790909a40580e6c8d419251fedecd.sample"
+type="AudioStreamWAV"
+uid="uid://cfvc11u4cq01a"
+path="res://.godot/imported/454830__misterkidx__zombie-die-1.wav-d9d790909a40580e6c8d419251fedecd.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/454830__misterkidx__zombie-die-1.wav"
-dest_files=[ "res://.import/454830__misterkidx__zombie-die-1.wav-d9d790909a40580e6c8d419251fedecd.sample" ]
+dest_files=["res://.godot/imported/454830__misterkidx__zombie-die-1.wav-d9d790909a40580e6c8d419251fedecd.sample"]
 
 [params]
 

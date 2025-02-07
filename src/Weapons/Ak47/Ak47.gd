@@ -1,7 +1,7 @@
-extends Spatial
+extends Node3D
 
-onready var sprite = $CanvasLayer/Control/WeaponAnim
-onready var shot = $ShotNoise
+@onready var sprite = $CanvasLayer/Control/WeaponAnim
+@onready var shot = $ShotNoise
 signal fire;
 var flash = preload("res://Weapons/Flash.tscn")
 # Declare member variables here. Examples:
@@ -19,11 +19,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Fire") && can_fire:
 		sprite.play("Fire")
-		add_child(flash.instance())
+		add_child(flash.instantiate())
 		shot.play()
 		can_fire = false;
 		emit_signal("fire")
-	yield(sprite,"animation_finished") 
+	await sprite.animation_finished 
 	sprite.play("Idle")
-	yield(sprite,"animation_finished")
+	await sprite.animation_finished
 	can_fire=true

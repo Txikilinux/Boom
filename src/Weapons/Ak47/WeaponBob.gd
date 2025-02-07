@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-export(bool) var disabled = false
-export(float) var speed = 0.1 # Arbitrary number
-export(float) var intensity_y = .1 # In pixels
-export(float) var intensity_x = .1 # In pixels
+@export var disabled: bool = false
+@export var speed: float = 0.1 # Arbitrary number
+@export var intensity_y: float = .1 # In pixels
+@export var intensity_x: float = .1 # In pixels
 
 var initial_offset : Vector2
 # We're moving the weapon in both the X and Y directions at different speeds so we need

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/515187__therobotrob__gotcha.wav-0fd70e00a15393c71bc1e9b27fd88318.sample"
+type="AudioStreamWAV"
+uid="uid://m40wt4wediia"
+path="res://.godot/imported/515187__therobotrob__gotcha.wav-0fd70e00a15393c71bc1e9b27fd88318.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/515187__therobotrob__gotcha.wav"
-dest_files=[ "res://.import/515187__therobotrob__gotcha.wav-0fd70e00a15393c71bc1e9b27fd88318.sample" ]
+dest_files=["res://.godot/imported/515187__therobotrob__gotcha.wav-0fd70e00a15393c71bc1e9b27fd88318.sample"]
 
 [params]
 

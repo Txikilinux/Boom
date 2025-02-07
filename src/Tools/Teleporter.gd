@@ -1,8 +1,8 @@
-extends Spatial
+extends Node3D
 
 
 
-onready var player : KinematicBody = get_tree().get_nodes_in_group("Player")[0]
+@onready var player : CharacterBody3D = get_tree().get_nodes_in_group("Player")[0]
 var dest_scene : String
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,5 +14,5 @@ func _process(delta: float) -> void:
 		player.set_process(false)
 		if not $AudioStreamPlayer.playing:
 			$AudioStreamPlayer.play()
-		get_tree().change_scene(dest_scene)
+		get_tree().change_scene_to_file(dest_scene)
 		

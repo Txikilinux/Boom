@@ -9,4 +9,4 @@ func _process(delta):
 		next_scene()
 	
 func next_scene():
-	get_tree().change_scene("res://Levels/Level0.tscn")
+	get_tree().change_scene_to_file("res://Levels/Level0.tscn")

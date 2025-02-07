@@ -1,11 +1,11 @@
-extends Spatial
+extends Node3D
 
 
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
-export var color:Color=Color.white
-onready var light:OmniLight = $OmniLight
+@export var color:Color=Color.WHITE
+@onready var light:OmniLight3D = $OmniLight3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	light.light_color=color

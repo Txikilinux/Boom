@@ -1,12 +1,12 @@
-extends KinematicBody
+extends CharacterBody3D
 
 
-onready var sprite : AnimatedSprite3D = $AnimatedSprite3D
-onready var player : KinematicBody = get_tree().get_nodes_in_group("Player")[0]
-onready var ray : RayCast = $RayCast
-onready var nav : NavigationAgent = $NavigationAgent
-onready var scream : AudioStreamPlayer = $Scream
-onready var gotcha : AudioStreamPlayer = $Gotcha
+@onready var sprite : AnimatedSprite3D = $AnimatedSprite3D
+@onready var player : CharacterBody3D = get_tree().get_nodes_in_group("Player")[0]
+@onready var ray : RayCast3D = $RayCast3D
+@onready var nav : NavigationAgent3D = $NavigationAgent3D
+@onready var scream : AudioStreamPlayer = $Scream
+@onready var gotcha : AudioStreamPlayer = $Gotcha
 var speed = 6
 var health = 3
 var ray_len = 35
@@ -24,7 +24,7 @@ func damage(how_much)->void:
 	if health<=0:
 		set_physics_process(false)
 		set_process(false)
-		$CollisionShape.disabled=true
+		$CollisionShape3D.disabled=true
 		sprite.play("die")
 		scream.play()	
 	else:
@@ -36,7 +36,7 @@ func damage(how_much)->void:
 
 func _physics_process(delta: float) -> void:
 	if following:
-		var next = nav.get_next_location()
+		var next = nav.get_next_path_position()
 		var direction = (next - transform.origin).normalized()
 		var vel = direction * speed * delta
 		move_and_collide(vel)
@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if distance < 100 and not killing:
 		sprite.play("Kill")
 		killing = true
-		yield(sprite,"animation_finished")
+		await sprite.animation_finished
 		distance = (player.transform.origin - transform.origin).length_squared()
 		killing = false
 		if distance < 200 and health>0:
@@ -57,9 +57,9 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	
 	var dir = (player.transform.origin-transform.origin).normalized()*ray_len
-	nav.set_target_location(player.transform.origin)
+	nav.set_target_position(player.transform.origin)
 	dir.y=0
-	ray.cast_to=dir
+	ray.target_position=dir
 	
 	if ray.is_colliding():
 		var coll=ray.get_collider()

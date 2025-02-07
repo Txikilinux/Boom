@@ -1,11 +1,11 @@
-extends KinematicBody
+extends CharacterBody3D
 
-onready var agent : NavigationAgent = $NavigationAgent
-onready var player : Node = get_tree().get_nodes_in_group("Player")[0]
-onready var sprite : AnimatedSprite3D = $AnimatedSprite3D
-onready var scream : AudioStreamPlayer = $Scream
-onready var fire_sound : AudioStreamPlayer = $Fire
-onready var raycast : RayCast =$ RayCast
+@onready var agent : NavigationAgent3D = $NavigationAgent3D
+@onready var player : Node = get_tree().get_nodes_in_group("Player")[0]
+@onready var sprite : AnimatedSprite3D = $AnimatedSprite3D
+@onready var scream : AudioStreamPlayer = $Scream
+@onready var fire_sound : AudioStreamPlayer = $Fire
+@onready var raycast : RayCast3D =$ RayCast3D
 var speed = 3
 var health=2
 var fire_distance=900
@@ -16,7 +16,7 @@ func damage(how_much)->void:
 	if health<=0:
 		set_physics_process(false)
 		set_process(false)
-		$CollisionShape.disabled=true
+		$CollisionShape3D.disabled=true
 		sprite.play("die")
 		scream.play()
 		
@@ -25,17 +25,17 @@ func damage(how_much)->void:
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	agent.set_target_location(player.transform.origin)
+	agent.set_target_position(player.transform.origin)
 	
 
 func _physics_process(delta: float) -> void:
-	var next = agent.get_next_location()
+	var next = agent.get_next_path_position()
 	var direction = (next - transform.origin).normalized()
 	# always cast fire in player direction, unless already in fire
 	# so player can avoid being hitten by moving away from fire ray
 	if not firing:
-		$RayCast.cast_to=(player.transform.origin-transform.origin).normalized()*100
-		$RayCast.cast_to.y=3.0 #adjust height
+		$RayCast3D.target_position=(player.transform.origin-transform.origin).normalized()*100
+		$RayCast3D.target_position.y=3.0 #adjust height
 	#print( "distance:%s"%(player.transform.origin - transform.origin).length_squared() )
 	if (player.transform.origin - transform.origin).length_squared() < fire_distance && !firing:
 		firing=true
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	# if old player position reached
 	# reset target - very poor AI for this enemy
 	if (next-transform.origin).length_squared()<.1:
-		agent.set_target_location(player.transform.origin)
+		agent.set_target_position(player.transform.origin)
 	move_and_collide(vel)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
@@ -56,7 +56,7 @@ func fire()->void:
 	speed=0
 	sprite.play("Fire")
 	fire_sound.play()
-	yield(sprite,"animation_finished") 
+	await sprite.animation_finished 
 	if raycast.is_colliding():
 		var hit = raycast.get_collider()
 		if hit.is_in_group("Player"):
@@ -64,7 +64,7 @@ func fire()->void:
 	if health>0:
 		speed=save
 		sprite.play("walk")
-		yield(get_tree().create_timer(1), "timeout")
+		await get_tree().create_timer(1).timeout
 		firing=false
 	
 

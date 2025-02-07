@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/491443__music15tree__roar.wav-16b91c7354e6d48217e3d42879715916.sample"
+type="AudioStreamWAV"
+uid="uid://c6r7pfvsu6dj0"
+path="res://.godot/imported/491443__music15tree__roar.wav-16b91c7354e6d48217e3d42879715916.sample"
 
 [deps]
 
 source_file="res://Characters/Sounds/491443__music15tree__roar.wav"
-dest_files=[ "res://.import/491443__music15tree__roar.wav-16b91c7354e6d48217e3d42879715916.sample" ]
+dest_files=["res://.godot/imported/491443__music15tree__roar.wav-16b91c7354e6d48217e3d42879715916.sample"]
 
 [params]
 
