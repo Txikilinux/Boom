@@ -1,5 +1,7 @@
 extends Node3D
 
+signal fire
+
 @onready var sprite = $CanvasLayer/Control/WeaponAnim
 @onready var shot = $ShotNoise
 var flash = preload("res://Weapons/Flash.tscn")

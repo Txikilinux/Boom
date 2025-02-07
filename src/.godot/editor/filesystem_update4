@@ -11,3 +11,4 @@ res://Tools/Wall.tscn
 res://Tools/Pillar.tscn
 res://Models/Torch/wall_torch.tscn
 res://Levels/Level0.tscn
+res://Characters/PlayerMovement.gd
