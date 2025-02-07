@@ -20,19 +20,19 @@ func _ready() -> void:
 	current_weapon = ak47.instance()
 	add_child(current_weapon)
 	current_weapon.connect("fire",self,"on_fire")
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var disp= Vector3(speed*delta,0,0)
 	disp = disp.rotated(Vector3(0,1,0),rotation.y)
-	if Input.is_key_pressed(KEY_W):
+	if Input.is_action_pressed("move_up"):
 		move_and_collide(-disp)
-	if Input.is_key_pressed(KEY_S):
+	if Input.is_action_pressed("move_down"):
 		move_and_collide(disp)
-	if Input.is_key_pressed(KEY_A):
+	if Input.is_action_pressed("move_left"):
 		rotate_y(ang_speed*delta)
-	if Input.is_key_pressed(KEY_D):
+	if Input.is_action_pressed("move_right"):
 		rotate_y(-ang_speed*delta)
 	pass
 
